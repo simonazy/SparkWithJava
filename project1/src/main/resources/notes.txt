@@ -1,0 +1,5 @@
+1. All java functions/methods must be in a class;
+2. The class name is the file name;
+3. Static method can be called by class name, while non-static method should be called through an instance. 
+4. Spark dataset is immutable.
+5. Java properties.
