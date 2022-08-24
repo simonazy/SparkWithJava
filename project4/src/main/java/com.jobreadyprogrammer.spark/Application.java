@@ -4,6 +4,9 @@ public class Application{
     public static void main(String[] args){
         ArrayToDataset app = new ArrayToDataset();
         app.start();
+        
+        CsvToDatasetHouseToDataframe app = new CsvToDatasetHouseToDataframe();
+		app.start();
     }
 
 }
