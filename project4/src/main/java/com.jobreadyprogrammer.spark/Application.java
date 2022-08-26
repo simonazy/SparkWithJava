@@ -7,6 +7,9 @@ public class Application{
         
         CsvToDatasetHouseToDataframe app = new CsvToDatasetHouseToDataframe();
 		app.start();
+	    
+	WordCount app = new WordCount();
+	    app.start();
     }
 
 }
