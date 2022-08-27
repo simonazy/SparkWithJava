@@ -1,4 +1,4 @@
-// Dataframe filter, where, join, union, select manipulations
+// Dataframe Transformation: filter, where, join, union, select manipulations;
 
 package com.jobreadyprogrammer.spark;
 
