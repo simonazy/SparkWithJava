@@ -50,6 +50,8 @@ public class CustomersAndProducts {
 	    									 .drop("product_id");
 	    
 	   Dataset<Row> aggDf = joinedData.groupBy("first_name", "product_name").agg(count("product_name").as("number_of_purchases"),
-	    																		 max("product_price").as("most_exp_purchase"),
-	    																		 sum("product_price").as("total_spent"));
+	    									     max("product_price").as("most_exp_purchase"),
+	    									     sum("product_price").as("total_spent"));
+	 //DAG: lazy executions;
+	agg.Df.show();
   }
