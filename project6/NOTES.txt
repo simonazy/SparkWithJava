@@ -1,0 +1,9 @@
+Run spark on EMR Steps: 
+
+1. Build a jar that include the java classes. There will be no dependencies, coz AWS has prepared the environment.
+2. Upload the jar to a HDFS, such as S3 bucket. 
+3. Set up a EMR: (a. Create through AWS console UI; 
+                  b. Create a key to access the EMR and store it on local computer;
+                  c. Add 'ssh' rule to security groups, including IPs, so, we access EMR through SSH command. )
+4. Copy the jar to the EMR: aws s3 cp
+5. Execute the job: spark-submit
