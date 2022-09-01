@@ -19,13 +19,14 @@ public class StreamingFileDirectoryApplication {
 		        .getOrCreate();
 		
 		// Read all the csv files written atomically in a directory
+		// StructType : schema;
 		StructType userSchema = new StructType().add("date", "string").add("value", "float");
 		
 		Dataset<Row> stockData = spark
 		  .readStream()
 		  .option("sep", ",")
 		  .schema(userSchema)      // Specify schema of the csv files
-		  .csv("/Users/simona/Desktop/SparkCourse/sparkwithjava/IncomingStockFiles"); // Equivalent to format("csv").load("/path/to/directory")
+		  .csv("/Users/simona/Desktop/SparkCourse/sparkwithjava/IncomingStockFiles"); // Equivalent to format("csv").load("/path/to/directory"); could be S3 bucket;
 		
 		
 		Dataset<Row> resultDf = stockData.groupBy("date").agg(avg(stockData.col("value")));
